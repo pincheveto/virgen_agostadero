@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.images {
+  height: 100px;
+}
+
+body {
+  min-height: 100vh;
+  background: url("https://i.ibb.co/209NTQR/maxresdefault-wallpaper.jpg")
+    no-repeat;
+  background-size: cover;
+  background-position: center;
+}
