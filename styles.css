@@ -2,16 +2,94 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-.images {
-  height: 100px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 body {
-  min-height: 100vh;
-  background: url("https://i.ibb.co/209NTQR/maxresdefault-wallpaper.jpg")
-    no-repeat;
+  height: 145vh;
+  position: relative;
+
+  background-image: linear-gradient(
+      rgba(240, 231, 231, 0.915),
+      rgba(236, 245, 246, 0.798)
+    ),
+    url(https://i.ibb.co/209NTQR/maxresdefault-wallpaper.jpg);
   background-size: cover;
-  background-position: center;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.logo {
+  height: 50px;
+  border-radius: 50px;
+}
+
+.menu-icono {
+  height: 30px;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 100;
+}
+
+.navbar a {
+  position: relative;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 40px;
+}
+
+.navbar a::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #fff;
+  transition: 0.3s;
+}
+
+.navbar a:hover:before {
+  width: 100%;
+}
+
+#menu {
+  display: none;
+}
+
+label {
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 991px) {
+  .navbar {
+    padding: 30px;
+    margin: 0;
+  }
+
+  label {
+    display: initial;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #323337;
+    display: none;
+  }
 }
